@@ -1,5 +1,5 @@
 // ============================================
-// JavaScript Identifier Rules - IQ
+// JavaScript Identifier Rules - IQ - Interview Questions
 // ============================================
 
 let validName = "starts with letter";
@@ -12,8 +12,8 @@ let _temp2 = "underscore then digit";
 let $var123 = "dollar then digits";
 let a1_b2 = "mixed letters digits underscore";
 
-// let 1stPlace = "invalid";
-// let 2ndItem = "invalid";
+// let 1stPlace = "invalid"; Variable name can't start with a digit
+// let 2ndItem = "invalid"; Variable name can't start with a digit
 
 // let Function = "invalid"; 
 // let Function = "invalid"; but it actually works. Function is a built-in name, not a reserved word
