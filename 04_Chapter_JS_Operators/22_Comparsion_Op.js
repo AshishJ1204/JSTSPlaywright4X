@@ -5,11 +5,11 @@
 
 //  ==, ===
 
-// == -> losse comparsion ( sikh vs hindu )
+// == -> loose comparsion ( sikh vs hindu )
 // === -> strict comparsion ( sikh vs hindu , languge, living)
 
 // pizza == pizza // ( type)
-// domin === pizzahut // (type and content)
+// domino === pizzahut // (type and content)
 
 // > , < , >= , <= 
 
@@ -19,7 +19,7 @@ console.log(3 < 4); // true
 console.log(4 >= 4); // (4 > 4 or 4 == 4, or gate) // true
 
 console.log(5 == "5"); // lose couple comparsion , value
-console.log(5 === "5"); // stict not allowed - valeu + datatype both
+console.log(5 === "5"); // stict not allowed - value + datatype both
 
 // === Strict check we will check for both the datatype and value
 // == Lose check we will check either value or data type.

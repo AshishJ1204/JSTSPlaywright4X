@@ -1,0 +1,4 @@
+let environment = "staging";
+let baseUrl = environment === "prod" ? "https://api.example.com" : "https://staging-api.example.com";
+//condition is false as environment is staging but not prod, the baseUrl will be set to the staging URL
+console.log(baseUrl);
