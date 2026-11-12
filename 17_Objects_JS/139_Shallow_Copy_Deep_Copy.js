@@ -1,33 +1,23 @@
-// JavaScript copies an object reference by value. These variables point to the same object.
-const original = {
-  name: "Amit",
-  address: {
-    city: "Pune",
-  },
-};
+// 1. Call by reference: one object, two names
+let a = { status: "pass" };
+let b = a;
+b.status = "fail";
+console.log(a.status);            // fail   (a changed too!)
 
-const sameReference = original;
-sameReference.name = "Rahul";
 
-console.log("After changing the shared object:");
-console.log(original.name); // Rahul
+// 2. Shallow copy (...spread): new object, but the inner object is shared
+let user1 = { name: "Pramod", address: { city: "Delhi" } };
+let copy1 = { ...user1 };
+copy1.name = "Amit";
+copy1.address.city = "Mumbai";
+console.log(user1.name);          // Pramod  (safe)
+console.log(user1.address.city);  // Mumbai  (changed!)
 
-// Spread makes a shallow copy: the outer object is new, but nested objects are shared.
-const shallowCopy = { ...original };
-shallowCopy.name = "Neha";
-shallowCopy.address.city = "Mumbai";
 
-console.log("After changing the shallow copy:");
-console.log(original.name); // Rahul: top-level name is independent
-console.log(original.address.city); // Mumbai: nested address is still shared
-
-// structuredClone makes a deep copy of this object's nested data.
-const deepCopy = structuredClone(original);
-deepCopy.name = "Ravi";
-deepCopy.address.city = "Delhi";
-
-console.log("After changing the deep copy:");
-console.log(original.name); // Rahul
-console.log(original.address.city); // Mumbai
-console.log(deepCopy.name); // Ravi
-console.log(deepCopy.address.city); // Delhi
+// 3. Deep copy (structuredClone): everything is new
+let user2 = { name: "Pramod", address: { city: "Delhi" } };
+let copy2 = structuredClone(user2);
+copy2.name = "Amit";
+copy2.address.city = "Mumbai";
+console.log(user2.name);          // Pramod  (safe)
+console.log(user2.address.city);  // Delhi   (safe)
